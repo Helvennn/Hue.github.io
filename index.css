@@ -1,0 +1,234 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #1b1b1b; height: 100%; width: 100%;
+    display: flex; justify-content: center;
+    align-items: center;
+}
+
+.button {
+    width: 165px; height: 55px;
+    display: flex; align-items: center;
+    justify-content: center;
+    font-size: 20px; transition: .3s ease-in-out;
+    border: 2px solid white;
+    box-sizing: border-box; right: 52.5px;
+    cursor: pointer; position: absolute;
+}
+
+.button h1 {
+    color: white; transition: 1s ease-in-out;
+    user-select: none;
+}
+
+@keyframes coloring {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.button:hover {
+    right: 45px;
+    width: 180px; height: 60px;
+    border-color: aqua;
+}
+
+.button:hover h1 {
+    color: #1b1b1b; position: absolute; z-index: 3;
+}
+
+.button .bg {
+    width: 0;
+    position: absolute;
+    background-color: aqua;
+    height: 100%;
+    justify-content: center;
+    transition: .5s ease;
+}
+
+.button:hover .bg {
+    width: 100%;
+}
+
+.button .bg2 {
+    width: 0;
+    position: absolute;
+    background-color: pink;
+    height: 100%;
+    justify-content: center;
+    transition: 3s ease;
+}
+
+.button:active {
+    right: 45px;
+    width: 180px; height: 60px;
+    border-color: pink;
+    transition: 3s ease;
+}
+
+.button:active h1 {
+    color: #1b1b1b; position: absolute; z-index: 3;
+}
+
+.button:active .bg2 {
+    width: 100%;
+}
+
+.circle {
+    height: 270px; width: 270px;
+    border-radius: 50%; background-color: #1b1b1b;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
+    transition: .7s; display: flex; position: absolute;
+    align-items: center;
+}
+
+.block {
+    width: 700px;
+    border-radius: 5px;
+}
+
+.block .button {
+    right: 50px;
+}
+
+.block .button:hover {
+    right: 42.5px;
+}
+
+.block .button:active {
+    right: 42.5px;
+}
+
+.colored .circle {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+.slider {
+    opacity: 0; appearance: none;
+    transition: .5s ease;
+    width: 385px; position: absolute;
+    left: 50px; height: 10px;
+    margin: 25px 0;
+    outline: none; box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 25px; height: 25px;
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+    appearance: none;
+    width: 25px; height: 25px;
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.redSlider {
+    top: 45px;
+    background: rgb(255,0,0, .3);
+}
+.redSlider:hover {
+    background: rgb(255,0,0, 1);
+}
+.redSlider:active {
+    box-shadow: 0 0 30px rgba(255, 35, 35, 0.8);
+}
+.grnSlider {
+    top: 105px;
+    background: rgb(0,255,0, .3);
+}
+.grnSlider:hover {
+    background: rgb(0,255,0, 1);
+}
+.grnSlider:active {
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.8);
+}
+.bluSlider {
+    top: 165px;
+    background: rgb(0,0,255, .3);
+}
+.bluSlider:hover {
+    background: rgb(0,0,255, 1);
+}
+.bluSlider:active {
+    box-shadow: 0 0 30px rgba(60, 60, 255, 0.8);
+}
+
+.circle2 {
+    height: 270px; width: 270px;
+    border-radius: 50%; background-color: #1b1b1b;
+    transition: .7s .1s; transform: rotate(45deg);
+    position: absolute; z-index: -1;
+}
+
+.copyright h1{
+    display: flex; position: absolute; bottom: 10px; user-select: none;
+    color: white; font-size: 15px;
+    left: 50%; transform: translateX(-50%);
+}
+
+.copyright img {
+    display: flex; position: absolute; bottom: 0; user-select: none;
+    left: 50%; transform: translateX(-50%);
+    width: 150px;
+}
