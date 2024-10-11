@@ -226,9 +226,3 @@ body {
     color: white; font-size: 15px;
     left: 50%; transform: translateX(-50%);
 }
-
-.copyright img {
-    display: flex; position: absolute; bottom: 0; user-select: none;
-    left: 50%; transform: translateX(-50%);
-    width: 150px;
-}
